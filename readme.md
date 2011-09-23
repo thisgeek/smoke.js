@@ -38,12 +38,14 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 Thanks!
 --------
-IE support, loading on demand, and other cool improvements facilitated by these dudes:
+IE support, loading on demand, and other cool improvements facilitated by these happenin' dudes:
 
 - Hugo Diaz
 - Michal Zielenkiewicz
 - Leon Fedotov
 - Lautaro Orazi
+- Leonardo Souza
+- Carlos Brito Lage
 
 
 
@@ -55,7 +57,11 @@ Current User Notices
 
 Planned Updates
 ---------------
+-Close dialog when "esc" is pressed
+
 -Logic to support stacking alert (and possibly signal) dialogs better (show in the right order, one at a time)
 	-errors in ie 7-8 :(
 	
 -Get webkit outbound transitions working properly again
+
+-Uniform callback implementation for everything (it's currently being done a little differently for prompt/confirm() and alert())

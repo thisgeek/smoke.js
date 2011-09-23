@@ -113,7 +113,7 @@ var smoke = {
 	finishbuild: function(e,f,box){
 	
 		var ff = document.getElementById('smoke-out-'+f.newid+'');
-				ff.className = 'smoke-base smoke-visible';		
+				ff.className = 'smoke-base smoke-visible  smoke-' + f.type;		
 				ff.innerHTML = box;
 				
 		while (ff.innerHTML == ""){
@@ -133,10 +133,11 @@ var smoke = {
 					if (f.type == 'prompt' || f.type == 'confirm'){
 						f.callback(false);
 					}
-					
+
+// checkit
 					if (f.type == 'alert' && typeof f.callback !== 'undefined') {
 						f.callback();
-					}					
+					}	
 				});
 	
 	
@@ -149,7 +150,7 @@ var smoke = {
 						smoke.destroy(f.type, f.newid);
 						if (typeof f.callback !== 'undefined') {
 							f.callback();
-						}					
+						}
 					});
 	
 	
