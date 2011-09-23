@@ -76,9 +76,15 @@ var smoke = {
 					'<button id="alert-ok-'+f.newid+'">'+ok+'</button>';
 			}
 			if (f.type == 'prompt' || f.type == 'confirm'){
-				buttons +=
-					'<button id="'+f.type+'-cancel-'+f.newid+'" class="cancel">'+cancel+'</button>'+
-					'<button id="'+f.type+'-ok-'+f.newid+'">'+ok+'</button>';
+				if (f.params.reverseButtons) {
+					buttons +=
+						'<button id="'+f.type+'-ok-'+f.newid+'">'+ok+'</button>' +
+						'<button id="'+f.type+'-cancel-'+f.newid+'" class="cancel">'+cancel+'</button>';				
+				} else {
+					buttons +=
+						'<button id="'+f.type+'-cancel-'+f.newid+'" class="cancel">'+cancel+'</button>'+
+						'<button id="'+f.type+'-ok-'+f.newid+'">'+ok+'</button>';
+				}
 			}
 			buttons += '</div>';
 		}
