@@ -1,4 +1,5 @@
 /*jslint browser: true, onevar: true, undef: true, nomen: false, eqeqeq: true, bitwise: true, regexp: true, newcap: true, immed: true */
+/*global define: false*/
 
 (function () { 
 	/*! 
@@ -434,5 +435,11 @@
 		});
 	}
 	
-	window.smoke = smoke;	
+	if (typeof define === 'function' && define.amd) {
+		define('smoke', function () {
+			return smoke;
+		});
+	} else {
+		window.smoke = smoke;
+	}
 }());
